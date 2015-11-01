@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Change Phone</string>
+    <string name="title_activity_change_brand">ChangeBrandActivity</string>
+</resources>
