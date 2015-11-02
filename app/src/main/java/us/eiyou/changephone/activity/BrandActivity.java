@@ -79,7 +79,6 @@ public class BrandActivity extends AppCompatActivity {
         wv_load_brand=(WebView)findViewById(R.id.wv_load_brand);
         wv_load_brand.loadUrl("file:///android_asset/load_brand.html");
         wv_load_brand.setVisibility(View.GONE);
-        ib_back.getBackground().setAlpha(121);
         b_ad=(Button)findViewById(R.id.b_ad);
     }
     private void catItoS() throws IOException, InterruptedException {

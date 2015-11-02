@@ -1,86 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d80099fd"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <us.eiyou.changephone.screenAdaptation.PercentRelativeLayout
         android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-        <TextView
+        <ScrollView
             android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:layout_height="0px"
             android:layout_alignEnd="@+id/b_brand"
             android:layout_alignLeft="@+id/b_brand"
             android:layout_alignParentTop="true"
             android:layout_alignRight="@+id/b_brand"
             android:layout_alignStart="@+id/b_brand"
-            android:text="修改手机品牌：修改完后重启手机，可以在QQ空间选择修改后的手机机型；手机About phone里自动改动。\n" />
+            android:background="@drawable/text_background"
+            app:layout_heightPercent="28%w"
+            app:layout_widthPercent="39%w">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_background"
+                android:padding="8px"
+                android:text="修改手机品牌：修改完后重启手机，可以在QQ空间选择修改后的手机机型；手机About phone里自动改动。\n"
+                app:layout_heightPercent="28%w" />
+        </ScrollView>
+
+        <ScrollView
             android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:layout_height="0px"
             android:layout_alignEnd="@+id/b_hosts"
             android:layout_alignLeft="@+id/b_hosts"
             android:layout_alignRight="@+id/b_hosts"
             android:layout_alignStart="@+id/b_hosts"
             android:layout_alignTop="@+id/text"
-            android:text="无痛一键翻墙：无需后台运行，不占用运行内存；不经过代理，安全有保障。（若长时间不点我失效了，戳我下就可以 =.=）" />
+            android:background="@drawable/text_background"
+            app:layout_heightPercent="28%w"
+            app:layout_widthPercent="39%w">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8px"
+                android:text="无痛一键翻墙：无需后台运行，不占用运行内存；不经过代理，安全有保障。（若长时间不点我失效了，戳我下就可以 =.=）" />
+        </ScrollView>
 
         <Button
             android:id="@+id/b_hosts"
-            android:layout_width="333px"
-            android:layout_height="461px"
+            android:layout_width="0px"
+            android:layout_height="0px"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/b_brand"
             android:background="@drawable/selector_function"
             android:text="无痛\n一键\n翻墙"
-            android:textSize="39dp" />
+            android:textSize="39dp"
+            app:layout_heightPercent="55%w"
+            app:layout_widthPercent="42%w" />
 
         <Button
             android:id="@+id/b_brand"
-            android:layout_width="333px"
-            android:layout_height="461px"
+            android:layout_width="0px"
+            android:layout_height="0px"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/text"
             android:background="@drawable/selector_function"
             android:text="修改\n手机\n品牌"
-            android:textSize="39dp" />
+            android:textSize="39dp"
+            app:layout_heightPercent="55%w"
+            app:layout_widthPercent="42%w" />
 
         <TextView
             android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:layout_height="0px"
             android:layout_above="@+id/b_ad"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/text_background"
+            android:gravity="center"
+            android:padding="7dp"
             android:text="我就是无耻的广告君 =。=\n"
-            android:textColor="#0c00ec" />
+            android:textColor="#0c00ec"
+            app:layout_heightPercent="9%w"
+            app:layout_widthPercent="52%w" />
 
         <Button
             android:id="@+id/b_ad"
-            android:layout_width="wrap_content"
-            android:layout_height="196px"
+            android:layout_width="0px"
+            android:layout_height="0px"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/selector_ad"
             android:text="我是广告 =.="
-            android:textSize="39dp" />
-    </RelativeLayout>
+            android:textSize="39dp"
+            app:layout_heightPercent="19%w"
+            app:layout_widthPercent="92%w" />
+    </us.eiyou.changephone.screenAdaptation.PercentRelativeLayout>
+
     <WebView
         android:id="@+id/wv_loading"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 </RelativeLayout>

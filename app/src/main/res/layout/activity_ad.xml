@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<us.eiyou.changephone.screenAdaptation.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#d80099fd"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <us.eiyou.changephone.screenAdaptation.PercentRelativeLayout
         android:id="@+id/rl_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,9 +17,13 @@
         android:paddingTop="47dp">
 
         <TextView
+            app:layout_marginTopPercent="2%"
+            android:background="@drawable/text_background"
+            android:padding="1px"
             android:id="@+id/text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_heightPercent="53%w"
             android:layout_marginBottom="43dp"
             android:gravity="center"
             android:text="看或者不看，商品就在那里,\n\n买或者不买，你就是最亮的那颗星。\n\n做你喜欢的自己,\n\n爱你所爱的Au."
@@ -27,8 +32,10 @@
 
         <Button
             android:id="@+id/b_show"
-            android:layout_width="333px"
-            android:layout_height="456px"
+            android:layout_width="0px"
+            app:layout_widthPercent="42%w"
+            android:layout_height="0px"
+            app:layout_heightPercent="55%w"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/text"
@@ -39,8 +46,10 @@
 
         <Button
             android:id="@+id/b_buy"
-            android:layout_width="333px"
-            android:layout_height="456px"
+            android:layout_width="0px"
+            app:layout_widthPercent="42%w"
+            android:layout_height="0px"
+            app:layout_heightPercent="55%w"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/b_show"
@@ -49,16 +58,18 @@
             android:text="淘宝\n链接"
             android:textSize="49dp" />
 
-    </RelativeLayout>
+    </us.eiyou.changephone.screenAdaptation.PercentRelativeLayout>
 
     <ImageButton
         android:id="@+id/ib_back"
-        android:layout_width="55dp"
-        android:layout_height="45dp"
+        app:layout_marginTopPercent="1%"
+        android:layout_width="0px"
+        app:layout_widthPercent="18%w"
+        android:layout_height="0px"
+        app:layout_heightPercent="12%w"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_margin="7dp"
-        android:background="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:background="@drawable/back"
         android:onClick="ib_back" />
-</RelativeLayout>
+</us.eiyou.changephone.screenAdaptation.PercentRelativeLayout>
